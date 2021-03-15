@@ -1,4 +1,4 @@
-package project_1
+//package project_1
 
 import org.apache.spark.SparkContext
 import org.apache.spark.SparkConf
