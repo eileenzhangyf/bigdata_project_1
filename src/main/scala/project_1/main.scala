@@ -54,8 +54,8 @@ object main {
     val seed = new java.util.Date().hashCode;
 
     val nonce = sc.range(0, trials).mapPartitionsWithIndex((indx, iter) => {
-      val rand = new scala.util.Random(indx + seed)
-      iter.map(x => rand.nextInt(Int.MaxValue - 1) + 1)
+      //val rand = new scala.util.Random(indx + seed)
+      iter.map(x => x + 1).foreach(x);
     })
 
     val hash_result = nonce.map(x => (x.toString(), sha256Hash(x.toString() + header_1)))
