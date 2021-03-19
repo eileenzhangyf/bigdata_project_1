@@ -1,5 +1,7 @@
 # Project 1 Solution
 
+## Name: Yifan Zhang
+
 ## 1.
 
 ### k=2,
