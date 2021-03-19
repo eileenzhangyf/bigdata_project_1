@@ -83,7 +83,9 @@ For k=6, I successful found xS when n=50000000. Since there is one more '0' when
 
 ## 3.
 
+I commented line 57 and changed line 58 to iter.map(x=>x+1).foreach(x). 
 
+If the value of k is small, then it is very inefficient to generate the potential nonce from 1 to n. As we can see from the results, the nonce is a large number. So we have to set n to be a large number to generate the nonce, which is unnecessary since we can set n=150 if nonce is generated randomly. According to our results, the nonce is still significantly greater than n in the cases when k=3,4,5,6. However, when k=7, the nonce and n are close. So I believe it is more efficient to generate the nonce from 1 to n only if k is very larger.
 
 
 
